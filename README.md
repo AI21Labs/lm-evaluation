@@ -29,8 +29,8 @@ When running through one of the API models, set the your API key(s) using the en
 
 Examples:
 ```console
-# Evaluate hellaswag and storycloze on j1-large
-python -m lm_evaluation.run_eval --tasks hellaswag storycloze --models ai21/j1-large
+# Evaluate hellaswag and winogrande on j1-large
+python -m lm_evaluation.run_eval --tasks hellaswag winogrande --models ai21/j1-large
 
 # Evaluate all multiple-choice tasks on j1-jumbo
 python -m lm_evaluation.run_eval --tasks all_mc --models ai21/j1-jumbo
