@@ -1,5 +1,5 @@
 # LM Evaluation Test Suite
-This repo contains code for running the evaluations and reproducing the results from the [Jurassic-1 Technical Paper](https://www.ai21.com/blog/announcing-ai21-studio-and-jurassic-1), with current support for running the tasks through both the [AI21 Studio API](https://studio.ai21.com/) and [OpenAI's GPT3 API](https://beta.openai.com/).
+This repo contains code for running the evaluations and reproducing the results from the [Jurassic-1 Technical Paper](https://uploads-ssl.webflow.com/60fd4503684b466578c0d307/61138924626a6981ee09caf6_jurassic_tech_paper.pdf) (see [blog post](https://www.ai21.com/blog/announcing-ai21-studio-and-jurassic-1)), with current support for running the tasks through both the [AI21 Studio API](https://studio.ai21.com/) and [OpenAI's GPT3 API](https://beta.openai.com/).
 
 ## Citation
 Please use the following bibtex entry:
