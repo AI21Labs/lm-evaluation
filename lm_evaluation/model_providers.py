@@ -130,7 +130,7 @@ class OpenAIModelProvider(APIModelProvider):
 
 
 class AI21ModelProvider(APIModelProvider):
-    _ENDPOINT = os.environ.get("AI21_STUDIO_ENDPOINT", "https://api.ai21.com/studio/v1/complete")
+    _ENDPOINT = os.environ.get("AI21_STUDIO_ENDPOINT", "https://api.ai21.com/studio/v1/{model}/complete")
     _API_KEY = os.environ.get('AI21_STUDIO_API_KEY', None)
 
     def __init__(self, model):
@@ -138,14 +138,14 @@ class AI21ModelProvider(APIModelProvider):
         assert self._API_KEY is not None, "Please set AI21_STUDIO_API_KEY env var for running through AI21 Studio"
 
     def _logprobs(self, text, add_start_text=False):
+        endpoint = self._ENDPOINT.format(model=self._model)
         req = {
             "prompt": text,
             "numResults": 1,
             "maxTokens": 0,
-            "topKReturn": 0,
-            "model": self._model
+            "topKReturn": 0
         }
-        data = self._api_call(self._ENDPOINT, req, self._API_KEY)
+        data = self._api_call(endpoint, req, self._API_KEY)
         prompt_data = data['prompt']
         text = prompt_data['text']
         tokens = [{
