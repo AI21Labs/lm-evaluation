@@ -41,7 +41,7 @@ python -m lm_evaluation.run_eval --tasks all_docprobs --models ai21/j1-large ope
 ```
 
 ## Datasets
-The repo currently support the zero-shot multiple-choice and document probability datasets reported in the [Jurassic-1 Technical Paper](http://TODO).
+The repo currently support the zero-shot multiple-choice and document probability datasets reported in the [Jurassic-1 Technical Paper](https://uploads-ssl.webflow.com/60fd4503684b466578c0d307/61138924626a6981ee09caf6_jurassic_tech_paper.pdf).
 
 ### Multiple Choice
 Multiple choice datasets are formatted as described in the [GPT3 paper](https://arxiv.org/abs/2005.14165), and the default reported evaluation metrics are those described there.
